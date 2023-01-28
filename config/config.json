@@ -1,0 +1,10 @@
+{
+    "pretrained_model_name_or_path": "weights",
+    "completed_model_path": "output",
+    "revision": "",
+    "config_vae": "config/vae.json",
+    "config_unet": "config/unet.json",
+    "train_vae": "false",
+    "train_unet": "true",
+    "train_text_encoder": "false"
+}

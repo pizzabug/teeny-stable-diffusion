@@ -1,0 +1,10 @@
+diffusers
+huggingface_hub
+matplotlib
+numpy
+open_clip_torch
+pytorch_lightning
+torch 
+torchvision 
+torchaudio
+transformers
