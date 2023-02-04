@@ -17,6 +17,7 @@ class DiffusionConfig:
     # Config file directories
     config_vae: str = "config/vae.json"
     config_unet: str = "config/unet.json"
+    config_scheduler: str = "config/scheduler.json"
 
     # Train flags
     train_vae: bool = False
@@ -31,10 +32,11 @@ class DiffusionConfig:
         revision = from_str(obj.get("revision"))
         config_vae = from_str(obj.get("config_vae"))
         config_unet = from_str(obj.get("config_unet"))
+        config_scheduler = from_str(obj.get("config_scheduler"))
         train_vae = from_stringified_bool(from_str(obj.get("train_vae")))
         train_unet = from_stringified_bool(from_str(obj.get("train_unet")))
         train_text_encoder = from_stringified_bool(from_str(obj.get("train_text_encoder")))
-        return DiffusionConfig(pretrained_model_name_or_path, completed_model_path, revision, config_vae, config_unet, train_vae, train_unet, train_text_encoder)
+        return DiffusionConfig(pretrained_model_name_or_path, completed_model_path, revision, config_vae, config_unet, config_scheduler, train_vae, train_unet, train_text_encoder)
 
     def to_dict(self) -> dict:
         result: dict = {}
@@ -43,6 +45,7 @@ class DiffusionConfig:
         result["revision"] = from_str(self.revision)
         result["config_vae"] = from_str(self.config_vae)
         result["config_unet"] = from_str(self.config_unet)
+        result["config_scheduler"] = from_str(self.config_scheduler)
         result["train_vae"] = from_str(str(self.train_vae).lower())
         result["train_unet"] = from_str(str(self.train_unet).lower())
         result["train_text_encoder"] = from_str(str(self.train_text_encoder).lower())

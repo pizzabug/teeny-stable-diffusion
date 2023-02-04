@@ -14,7 +14,7 @@ def from_list(f: Callable[[Any], T], x: Any) -> List[T]:
 
 
 def from_int(x: Any) -> int:
-    assert isinstance(x, int) and not isinstance(x, bool)
+    assert (isinstance(x, int) and not isinstance(x, bool)) or (x == None)
     return x
 
 

@@ -4,6 +4,7 @@
     "revision": "",
     "config_vae": "config/vae.json",
     "config_unet": "config/unet.json",
+    "config_scheduler": "config/scheduler.json",
     "train_vae": "false",
     "train_unet": "true",
     "train_text_encoder": "false"
